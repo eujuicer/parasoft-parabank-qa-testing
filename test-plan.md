@@ -56,13 +56,17 @@ L'objectif de cette campagne est de valider les parcours critiques de l'applicat
 | `parabank.parasoft.com` (démo publique) | Exploration manuelle initiale, capture des messages système réels |
 | Instance locale via `docker-compose` (dépôt `parabank` cloné) | Tests d'automatisation (API, UI) et pipeline CI — environnement stable et reproductible |
 
-## 7. Critères d'entrée
+## 7. Outil de gestion des tests et traçabilité
+
+**Choix : Squash TM seul**, sans JIRA/Xray. L'énoncé demande "un outil de gestion (JIRA/Xray *ou* Squash TM)" — Squash TM couvre nativement toute la traçabilité exigence → cas → exécution → anomalie exigée, sans besoin d'un outil de ticketing supplémentaire. Squash TM dispose d'un connecteur JIRA natif (gratuit) qui aurait permis de synchroniser des tickets JIRA si besoin, mais cette intégration ajouterait de la complexité de configuration sans plus-value pour un projet individuel sans sprint ni équipe à coordonner — d'où le choix de ne pas l'activer.
+
+## 8. Critères d'entrée
 
 - Choix de l'application validé par le formateur ✅ (fait)
 - Instance locale ParaBank fonctionnelle via Docker
 - Accès en écriture au dépôt Git du projet
 
-## 8. Critères de sortie
+## 9. Critères de sortie
 
 - 100 % des cas de test priorité Haute exécutés (Login, Transfer Funds, Bill Pay)
 - Au moins 80 % des cas de test priorité Moyenne exécutés
@@ -70,7 +74,7 @@ L'objectif de cette campagne est de valider les parcours critiques de l'applicat
 - Pipeline CI exécuté avec succès (ou échec justifié) et visible dans l'historique du dépôt
 - Rapport de campagne final rédigé avec métriques et recommandations
 
-## 9. Livrables
+## 10. Livrables
 
 - Ce plan de test
 - Cas de test manuels (`test-cases/`)
