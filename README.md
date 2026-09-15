@@ -27,8 +27,8 @@ Valider les principaux parcours utilisateurs de ParaBank via des tests manuels s
 - Bill Pay : validé (TC-BILL-01, TC-BILL-02)
 - Transfer Funds : 1 anomalie trouvée (BUG-001)
 - Find Transactions : validé (TC-FIND-01)
-- Open New Account : non testable pour le moment — l'instance de démo publique renvoie une erreur serveur de façon intermittente sur plusieurs pages (site partagé, connu pour son instabilité)
+- Open New Account : validé (TC-OPEN-01) — l'instance de démo publique avait renvoyé des erreurs serveur intermittentes en début de session (site partagé, connu pour son instabilité), résolu après nouvelle tentative
 
 ## Statut
 
-En cours — cas de test rédigés et exécutés pour Login/Register, Bill Pay, Transfer Funds, Find Transactions. À compléter : Open New Account, Update Contact Info, Request Loan.
+En cours — cas de test rédigés et exécutés pour Login/Register, Bill Pay, Transfer Funds, Find Transactions, Open New Account. À compléter : Update Contact Info, Request Loan.
