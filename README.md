@@ -1,34 +1,38 @@
-# Parasoft ParaBank — QA Testing Project
+# Parasoft ParaBank — Projet final QA
 
-Projet de tests QA sur l'application bancaire de démonstration [ParaBank](https://parabank.parasoft.com/parabank/index.htm) (Parasoft), réalisé dans le cadre de la formation Testeur QA.
+Projet final de la formation Testeur QA (BStorm), réalisé sur l'application bancaire de démonstration [ParaBank](https://parabank.parasoft.com/parabank/index.htm) (Parasoft) — application choisie et validée par le formateur, distincte de l'application fil rouge utilisée pendant la formation.
 
 ## Objectif
 
-Valider les principaux parcours utilisateurs de ParaBank via des tests manuels structurés, avec une base prête pour l'automatisation.
-
-## Périmètre fonctionnel
-
-- Connexion / inscription utilisateur
-- Ouverture de compte (Open New Account)
-- Virement entre comptes (Transfer Funds)
-- Paiement de factures (Bill Pay)
-- Consultation des transactions (Find Transactions)
-- Mise à jour des informations de contact (Update Contact Info)
-- Demande de prêt (Request Loan)
+Démontrer la maîtrise de la chaîne complète d'assurance qualité : stratégie de test, tests manuels, tests d'API, automatisation UI, intégration continue, jusqu'à la soutenance devant jury.
 
 ## Structure du dépôt
 
-- `test-cases/` — cas de test manuels, exécutés sur l'instance de démo publique (voir [test-cases/README.md](test-cases/README.md))
-- `bugs/` — anomalies trouvées, dont [BUG-001](bugs/BUG-001-transfer-empty-amount.md) (erreur serveur sur Transfer Funds avec montant vide)
+| Élément | Statut |
+|---|---|
+| [`test-plan.md`](test-plan.md) — stratégie, périmètre, analyse de risques, critères d'entrée/sortie | ✅ |
+| `test-cases/` — cas de test manuels (voir [test-cases/README.md](test-cases/README.md)) | 🟡 en cours |
+| `bugs/` — rapports d'anomalie, dont [BUG-001](bugs/BUG-001-transfer-empty-amount.md) | 🟡 en cours |
+| Campagne Squash TM / Xray (traçabilité exigence → cas → exécution → anomalie) | ❌ à faire |
+| Collection Bruno (API, auth OAuth2/JWT, scénario chaîné) | ❌ à faire |
+| Suite PyTest automatisée (data-driven, JSON Schema, cas sécurité) | ❌ à faire |
+| Framework UI Playwright/Selenium (Page Object Model) | ❌ à faire |
+| Pipeline GitHub Actions + rapports Allure | ❌ à faire |
+| Rapport de campagne final (métriques, risques résiduels, recommandations) | ❌ à faire |
 
-## Résultats
+## Résultats des tests manuels (à date)
 
 - Connexion / Inscription : validées (TC-REG-01, TC-REG-02, TC-LOGIN-01)
 - Bill Pay : validé (TC-BILL-01, TC-BILL-02)
 - Transfer Funds : 1 anomalie trouvée (BUG-001)
 - Find Transactions : validé (TC-FIND-01)
-- Open New Account : validé (TC-OPEN-01) — l'instance de démo publique avait renvoyé des erreurs serveur intermittentes en début de session (site partagé, connu pour son instabilité), résolu après nouvelle tentative
+- Open New Account : validé (TC-OPEN-01)
+
+## Environnements
+
+- Démo publique `parabank.parasoft.com` : exploration manuelle (voir note sur son instabilité dans [test-plan.md](test-plan.md))
+- Instance locale via `docker-compose` (dépôt `parabank` cloné) : automatisation et CI, environnement stable
 
 ## Statut
 
-En cours — cas de test rédigés et exécutés pour Login/Register, Bill Pay, Transfer Funds, Find Transactions, Open New Account. À compléter : Update Contact Info, Request Loan.
+En cours — voir [test-plan.md](test-plan.md) pour le détail du périmètre et de la priorisation basée sur les risques.
