@@ -31,7 +31,7 @@ Démontrer la maîtrise de la chaîne complète d'assurance qualité : stratégi
 ## Environnements
 
 - Démo publique `parabank.parasoft.com` : exploration manuelle (voir note sur son instabilité dans [test-plan.md](test-plan.md))
-- Instance locale via `docker-compose` (dépôt `parabank` cloné) : automatisation et CI, environnement stable
+- Instance locale via Docker : automatisation et CI, environnement stable — voir [environment/README.md](environment/README.md) pour l'installation
 
 ## Statut
 

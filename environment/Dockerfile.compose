@@ -1,0 +1,13 @@
+# syntax=docker/dockerfile:1
+# Étape 1 : build du .war avec Maven (évite d'installer Maven/Java sur la machine hôte)
+FROM maven:3.9-eclipse-temurin-21 AS build
+WORKDIR /app
+COPY pom.xml .
+RUN --mount=type=cache,target=/root/.m2 mvn -B dependency:go-offline
+COPY . .
+RUN --mount=type=cache,target=/root/.m2 mvn -B -DskipTests -DskipITs -Dcargo.skip=true clean install
+
+# Étape 2 : déploiement sur Tomcat
+FROM tomcat:10.1.59-jre21-temurin-noble
+COPY --from=build /app/target/parabank.war /usr/local/tomcat/webapps/
+EXPOSE 8080

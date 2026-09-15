@@ -1,0 +1,9 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.compose
+    container_name: parabank-web
+    restart: unless-stopped
+    ports:
+      - "8081:8080"
