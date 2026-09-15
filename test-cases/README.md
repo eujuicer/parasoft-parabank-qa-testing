@@ -1,17 +1,18 @@
 # Cas de test manuels
 
-Chaque fonctionnalité de ParaBank a son propre fichier CSV dans ce dossier, au format suivant :
+Un fichier Markdown par fonctionnalité, chaque cas de test suivant ce format :
 
-| Colonne | Description |
-|---|---|
-| ID | Identifiant unique (ex: TC-LOGIN-01) |
-| Titre | Résumé court du cas de test |
-| Technique | Technique de conception utilisée : partition d'équivalence, analyse aux valeurs limites, ou test exploratoire |
-| Préconditions | État requis avant l'exécution |
-| Étapes | Actions à effectuer, numérotées |
-| Résultat attendu | Comportement attendu du système |
-| Résultat obtenu | À remplir lors de l'exécution |
-| Statut | Pass / Fail / Not Run |
-| Priorité | Haute / Moyenne / Basse |
+- **Technique** : partition d'équivalence, analyse aux valeurs limites, ou test exploratoire
+- **Priorité** : Haute / Moyenne / Basse
+- **Statut** : ✅ Pass / ❌ Fail / ⬜ Not Run
+- **Préconditions**, **Étapes**, **Résultat attendu**, **Résultat obtenu**
 
-Voir `manual-test-cases-template.csv` pour le modèle vide.
+## Fichiers
+
+- [01-connexion.md](01-connexion.md) — Connexion / Inscription
+- [02-bill-pay.md](02-bill-pay.md) — Paiement de factures
+- [03-transfer-funds.md](03-transfer-funds.md) — Virements entre comptes
+- [04-find-transactions.md](04-find-transactions.md) — Recherche de transactions
+- [05-open-account.md](05-open-account.md) — Ouverture de compte
+
+> Ces fichiers seront importés dans Squash TM pour la campagne de gestion avec traçabilité exigence → cas → exécution → anomalie (voir [test-plan.md](../test-plan.md)).

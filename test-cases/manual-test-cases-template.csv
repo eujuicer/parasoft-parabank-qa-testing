@@ -1,7 +1,0 @@
-ID,Titre,Préconditions,Étapes,Résultat attendu,Résultat obtenu,Statut,Priorité
-TC-LOGIN-01,Connexion avec identifiants valides,"Un compte utilisateur existe","1. Aller sur la page de connexion
-2. Saisir un nom d'utilisateur et mot de passe valides
-3. Cliquer sur Log In","L'utilisateur est redirigé vers la page Account Overview",,Not Run,Haute
-TC-LOGIN-02,Connexion avec mot de passe invalide,"Un compte utilisateur existe","1. Aller sur la page de connexion
-2. Saisir un nom d'utilisateur valide et un mot de passe incorrect
-3. Cliquer sur Log In","Un message d'erreur s'affiche, l'utilisateur n'est pas connecté",,Not Run,Haute

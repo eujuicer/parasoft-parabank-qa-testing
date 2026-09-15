@@ -1,9 +1,0 @@
-ID,Titre,Technique,Préconditions,Étapes,Résultat attendu,Résultat obtenu,Statut,Priorité
-TC-OPEN-01,Ouverture d'un nouveau compte CHECKING,Partition d'équivalence (classe valide),"Utilisateur connecté, au moins un compte existant pour le dépôt initial","1. Aller sur Open New Account
-2. Sélectionner le type de compte CHECKING
-3. Sélectionner le compte source pour le dépôt initial
-4. Cliquer sur Open New Account","Le nouveau compte est créé avec un numéro de compte unique, un message de confirmation s'affiche","Conforme : ""Account Opened! Congratulations, your account is now open."" + nouveau numéro de compte affiché (ex: #15564)",Pass,Haute
-TC-OPEN-02,Ouverture d'un nouveau compte SAVINGS,Partition d'équivalence (classe valide — variante de type de compte),"Utilisateur connecté, au moins un compte existant","1. Aller sur Open New Account
-2. Sélectionner le type de compte SAVINGS
-3. Sélectionner le compte source
-4. Cliquer sur Open New Account","Le nouveau compte SAVINGS est créé avec un numéro de compte unique",,Not Run,Moyenne
