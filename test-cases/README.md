@@ -6,6 +6,7 @@ Chaque fonctionnalité de ParaBank a son propre fichier CSV dans ce dossier, au 
 |---|---|
 | ID | Identifiant unique (ex: TC-LOGIN-01) |
 | Titre | Résumé court du cas de test |
+| Technique | Technique de conception utilisée : partition d'équivalence, analyse aux valeurs limites, ou test exploratoire |
 | Préconditions | État requis avant l'exécution |
 | Étapes | Actions à effectuer, numérotées |
 | Résultat attendu | Comportement attendu du système |

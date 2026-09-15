@@ -1,8 +1,8 @@
-ID,Titre,Préconditions,Étapes,Résultat attendu,Résultat obtenu,Statut,Priorité
-TC-FIND-01,Recherche de transaction par montant,"Utilisateur connecté, au moins une transaction existante d'un montant connu","1. Aller sur Find Transactions
+ID,Titre,Technique,Préconditions,Étapes,Résultat attendu,Résultat obtenu,Statut,Priorité
+TC-FIND-01,Recherche de transaction par montant,Partition d'équivalence (classe valide),"Utilisateur connecté, au moins une transaction existante d'un montant connu","1. Aller sur Find Transactions
 2. Sélectionner le compte concerné
 3. Saisir le montant exact dans Find by Amount
 4. Cliquer sur Find Transactions","Le tableau Transaction Results affiche toutes les transactions correspondant à ce montant, avec Date, Transaction, Debit/Credit","Conforme : recherche d'un virement de 25.00 $ a bien retourné les 2 lignes liées (Funds Transfer Sent / Funds Transfer Received) avec la bonne date",Pass,Moyenne
-TC-FIND-02,Recherche par Transaction ID inexistant,"Utilisateur connecté","1. Aller sur Find Transactions
+TC-FIND-02,Recherche par Transaction ID inexistant,Partition d'équivalence (classe invalide),"Utilisateur connecté","1. Aller sur Find Transactions
 2. Saisir un ID de transaction qui n'existe pas
 3. Cliquer sur Find Transactions","Un message clair indique qu'aucune transaction n'a été trouvée",,Not Run,Basse
